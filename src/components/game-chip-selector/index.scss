@@ -1,0 +1,42 @@
+.game-chip-selector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap:40px;
+    #normal{
+        display: grid;
+        column-gap: 80px;
+        row-gap: 25px;
+        background-image: url("../../../public/assets/bg-triangle.svg");
+        background-repeat: no-repeat; /* Optional: Specify if you want the image to repeat */
+        background-position: center center;
+    }
+    #advanced{
+        display: grid;
+        background-image: url("../../../public/assets/bg-pentagon.svg");
+        background-repeat: no-repeat; /* Optional: Specify if you want the image to repeat */
+        background-position: center center;
+        background-size: 400px 400px;
+        .second-layer, .third-layer{
+            display: flex;
+            justify-content: center;
+            grid-column: span 2;  
+        }
+        .second-layer{
+            gap:160px;
+        }
+        .third-layer{
+            padding-top: 25px;
+            gap:40px;
+        }
+    } 
+}
+
+@media only screen and (max-width: 690px) {
+    #normal{
+        column-gap: 45px !important;
+        row-gap: 25px !important;
+        background-size: 200px 200px;
+    }
+}

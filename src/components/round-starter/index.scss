@@ -1,0 +1,72 @@
+@import "./../../index.scss";
+
+.round-starter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    justify-items: center;
+    flex-grow: 1;
+    .round-starter-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:65px;
+    }
+    .play-again-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap:20px;
+        animation: showWinner 1s ease-in-out;
+        h1{
+            font-size: 60px;
+            white-space: nowrap;
+        }
+        button{
+            border-radius: 10px;
+            background-color: $white;
+            color: red;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 15px 0px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@keyframes showWinner {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+  .round-starter{
+    grid-template-columns: 1fr 1fr !important;
+    .round-starter-item{
+      flex-direction: column-reverse !important;
+      gap:35px !important;
+      h1{
+        font-size: 14px !important;
+        letter-spacing: 3px !important;
+        white-space: nowrap !important;
+      }
+    }
+    .play-again-container{
+      justify-content: initial !important;
+    }
+  }
+}

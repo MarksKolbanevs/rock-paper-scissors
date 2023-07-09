@@ -1,0 +1,51 @@
+@import "./../../index.scss";
+
+.game-chip-outer{
+    position: relative;
+    border-radius: 50%;
+    padding: 25px;
+    background-color: $white;
+    .game-chip-inner{
+        background-color: $white;
+        border-radius: 50%;
+        padding: 40px;
+        -webkit-box-shadow: 1px 10px 0px -1px rgb(234 234 234) inset;
+        img{
+            width: 70px;
+            height: 70px;
+        } 
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.activated{
+    animation: rotateActivated 5s linear infinite;
+
+    box-shadow: 0 0 0 70px rgba(255, 255, 255, 0.04),
+                0 0 0 170px rgba(255, 255, 255, 0.04),
+                0 0 0 270px rgba(255, 255, 255, 0.02) !important;
+}
+
+@keyframes rotateActivated {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .game-chip-outer{
+        padding: 15px !important;
+        .game-chip-inner{
+            padding: 25px !important;
+            img{
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+    } 
+}
