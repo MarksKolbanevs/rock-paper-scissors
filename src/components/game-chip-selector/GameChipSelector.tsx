@@ -26,12 +26,12 @@ export default function GameChipSelector() {
             <GameChip type="scissors" onClick = {() => setPickedChip("scissors")}/>
           </div>
           <div className="second-layer">
-            <GameChip type="rock" onClick = {() => setPickedChip("rock")}/>
+            <GameChip type="spock" onClick = {() => setPickedChip("spock")}/>
             <GameChip type="paper" onClick = {() => setPickedChip("paper")}/>
           </div>
           <div className="third-layer">
-            <GameChip type="spock" onClick = {() => setPickedChip("spock")}/>
             <GameChip type="lizard" onClick = {() => setPickedChip("lizard")}/>
+            <GameChip type="rock" onClick = {() => setPickedChip("rock")}/>
           </div>
         </div>
       }
